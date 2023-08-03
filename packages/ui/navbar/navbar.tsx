@@ -2,14 +2,14 @@ import React, { Suspense } from "react";
 import { BrowserRouter, Outlet, Link, Routes, Route } from "react-router-dom";
 
 export type Route = {
-    element: React.FunctionComponent;
-    path: string;
-  };
-  
-  export type NavLink = {
-    label: string;
-    path: string;
-  };
+  element: React.FunctionComponent;
+  path: string;
+};
+
+export type NavLink = {
+  label: string;
+  path: string;
+};
 
 export const NavBar: React.FunctionComponent<{
   routes: Route[];
@@ -18,11 +18,19 @@ export const NavBar: React.FunctionComponent<{
   return (
     <BrowserRouter>
       <div className="container-navbar">
-        {navLinks.map((link) => (
-          <Link to={link.path} key={link.path}>
-            {link.label}
-          </Link>
-        ))}
+        <nav className="navbar bg-body-tertiary">
+          <form className="container-fluid justify-content-start">
+            {navLinks.map((link) => (
+              <Link
+                className="btn btn-sm btn-outline-primary me-2"
+                to={link.path}
+                key={link.path}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </form>
+        </nav>
       </div>
       <div className="containter-content">
         <Routes>

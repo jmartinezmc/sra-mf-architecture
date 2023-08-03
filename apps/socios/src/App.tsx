@@ -1,11 +1,11 @@
 import React from "react";
-import "./App.css";
+import "./index.scss";
 import { Header } from "ui";
 
 function App() {
   return (
-    <div className="container">
-      <Header title="Socios Application" />
+    <div className="container-fuild">
+      <Header title="App Socios" />
       <div className="application-container">
         <div>Socios</div>
       </div>

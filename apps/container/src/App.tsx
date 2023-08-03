@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./index.scss";
 import { NavBar } from "ui";
 // @ts-ignore
 const LaboratorioApp = React.lazy(() => import("laboratorio/LaboratorioApp"));
@@ -38,7 +38,7 @@ function App() {
   ];
 
   return (
-    <div className="container">
+    <div className="container-fluid">
       <NavBar routes={routes} navLinks={navLinks} />
     </div>
   );
